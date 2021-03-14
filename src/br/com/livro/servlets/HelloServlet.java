@@ -19,6 +19,10 @@ public class HelloServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+	}
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		String nome = req.getParameter("nome");
 		String sobrenome = req.getParameter("sobrenome");
 
@@ -26,12 +30,7 @@ public class HelloServlet extends HttpServlet {
 		System.out.println("O sobrenome enviado através do formulário é : " + sobrenome);
 
 		resp.getWriter().print("Olá mundo Servlets " + nome + " " + sobrenome);
-	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		doGet(request, response);
 	}
 
 }
