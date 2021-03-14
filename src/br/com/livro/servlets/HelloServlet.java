@@ -19,6 +19,14 @@ public class HelloServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		String nome = req.getParameter("nome");
+		String sobrenome = req.getParameter("sobrenome");
+
+		System.out.println("O nome enviado por formulário é : " + nome);
+		System.out.println("O sobrenome enviado através do formulário é : " + sobrenome);
+
+		resp.getWriter().print("Ola mundo Servlets " + nome + " " + sobrenome);
+
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,7 +37,19 @@ public class HelloServlet extends HttpServlet {
 		System.out.println("O nome enviado por formulário é : " + nome);
 		System.out.println("O sobrenome enviado através do formulário é : " + sobrenome);
 
-		resp.getWriter().print("Olá mundo Servlets " + nome + " " + sobrenome);
+		resp.getWriter().print("Ola mundo Servlets!!!!!! " + nome + " " + sobrenome);
+
+	}
+
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		resp.getWriter().print("Ola método PUT");
+
+	}
+
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		resp.getWriter().print("Ola método DELETE");
 
 	}
 
