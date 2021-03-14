@@ -22,6 +22,9 @@ public class HelloServlet extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String sobrenome = req.getParameter("sobrenome");
 
+		System.out.println("O nome enviado por formulário é : " + nome);
+		System.out.println("O sobrenome enviado através do formulário é : " + sobrenome);
+
 		resp.getWriter().print("Olá mundo Servlets " + nome + " " + sobrenome);
 	}
 
