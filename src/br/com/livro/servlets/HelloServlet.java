@@ -43,13 +43,13 @@ public class HelloServlet extends HttpServlet {
 
 	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		resp.getWriter().print("Ola método PUT");
+		resp.getWriter().print("Ola metodo PUT");
 
 	}
 
 	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		resp.getWriter().print("Ola método DELETE");
+		resp.getWriter().print("Ola metodo DELETE");
 
 	}
 
